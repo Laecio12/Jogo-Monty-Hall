@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  button {
+    background-color: var(--red-300);
+    margin-top: 2.5rem;
+    color: #ffff;
+    font-size: 2rem;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 0.25rem;
+
+    transition: filter 0.2s;
+
+    &:hover{
+      filter: brightness(0.9);
+    }
+  }
+}
+
+.doors{
+  display: flex;
+  align-self: stretch;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

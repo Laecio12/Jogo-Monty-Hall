@@ -25,6 +25,9 @@ export default class ModelDoor {
   get opened() {
     return this.#opened
   }
+  get closed() {
+    return !this.#opened
+  }
   get selected() {
     return this.#selected
   }

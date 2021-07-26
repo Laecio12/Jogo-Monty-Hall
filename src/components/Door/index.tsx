@@ -1,5 +1,6 @@
 import { FormEvent } from 'react';
 import  DoorModel  from '../../model/door';
+import { Gift } from '../Gift';
 import styles from './styles.module.scss';
 
 interface DoorPros {
@@ -40,7 +41,7 @@ export function Door({ value, onChange }: DoorPros) {
   return (
     <div className={styles.container} onClick={handleAlterSelection}>
        <div className={`${styles.frame} ${selected}`}>
-          {value.opened ? false : renderDoor()}
+          {value.closed ? renderDoor() : value.haveGift ? <Gift/> : false}
        </div>
 
       <div className={styles.floor}>
